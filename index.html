@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Caja Registradora - Carlos Anaya</title>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+   <script src="https://kit.fontawesome.com/43698937cd.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+
+   <div class="container pt-5">
+      <div class="row">
+         <div class="col-sm-12 offset-lg-4 col-lg-4">
+            <div class="card shadow">
+               <div class="card-header text-center">
+                  <h5>Caja Registradora</h5>
+               </div>
+               <div class="card-body py-5">
+                     <button type="button" class="btn btn-outline-primary" onclick="nombreCliente();">
+                     <i class="fas fa-user-plus"></i> Agregar un nuevo cliente
+                  </button>
+               </div>
+            </div>
+            <div class="col-sm-12 my-4 text-center">
+               <span class="">Desarrollado por <b>Carlos Anaya</b></span>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal fade" id="mimodal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="mimodalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="mimodalLabel">Nueva Factura</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body">
+            <h5><small>Nombre del cliente:</small> <span id="nombre"></span></h5>
+            <hr>
+            Lista de articulos: <br>
+            <ul id="lista"></ul>
+            <div class="text-center mt-3">
+               <button class="btn btn-primary" onclick="addArticulo();">Agregar Articulo +</button>
+            </div>
+            <hr>
+            <h5>Total a pagar: $ <span id="total">0</span></h5>
+         </div>
+         <div class="modal-footer">
+           <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button> -->
+           <button type="button" class="btn btn-outline-danger" onclick="limpiar();" data-dismiss="modal">Cerrar</button>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <script src="script.js" charset="utf-8"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
